@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>SAé3.Crea.03 - gsap</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <h3 class="nav-title">ADEME</h3>
+      <button class="nav-button">NEWSLETTER</button>
+    </nav>
+    <header class="header">
+      <h1 class="header-h1">TA VIE NUMÉRIQUE EN 24H</h1>
+      <div class="header-texte">
+        <p class="header-title">
+          Chaque geste compte... même se que tu ne vois pas !
+        </p>
+        <p class="header-description">
+          Découvrez l'empreinte invisible du numérique qui t'accompagne du
+          réveil au coucher.
+        </p>
+      </div>
+      <div class="header-phones">
+        <div class="header-images">
+          <img
+            class="header-image1"
+            src="./public/messages.svg"
+            alt="messages"
+          />
+          <img class="header-image2" src="./public/notes.svg" alt="notes" />
+          <img class="header-image3" src="./public/map.svg" alt="map" />
+          <img class="header-image4" src="./public/phone.svg" alt="phone" />
+        </div>
+        <img class="header-phone-img" src="./public/tel.svg" alt="telephone" />
+      </div>
+    </header>
+    <section class="description">
+      <div class="description-lea">
+        <img
+          class="description-lea-image"
+          src="./public/Léa/léa 1.svg"
+          alt="léa"
+        />
+        <img
+          class="description-lea-shape"
+          src="./public/Shape/shape1.svg"
+          alt=""
+        />
+        <div class="description-lea-bubble">
+          <img src="./public/bubble2.svg" alt="" />
+          <div class="description-lea-description">
+            <h2 class="description-lea-title">LÉA</h2>
+            <p class="description-lea-texte">
+              Je suis Léa. Comme toi, je vis connectée du matin au soir… sans
+              vraiment réaliser l’impact de toutes mes actions numériques. Avec
+              Pixi on va décortiquer mes prochaines 24 heures !
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="description-pixi">
+        <div class="description-pixi-bubble">
+          <img src="./public/bubble.svg" alt="" />
+          <div class="description-pixi-description">
+            <h2 class="description-pixi-title">PIXIE</h2>
+            <p class="description-pixi-texte">
+              Moi, c’est Pixi ! Je suis la petite voix cachée derrière tes
+              données. Je vais te montrer tout ce que ton smartphone, ton cloud
+              et ton streaming ne te disent jamais…
+            </p>
+          </div>
+        </div>
+        <img
+          class="description-pixi-image"
+          src="./public/Pixi/Pixi.svg"
+          alt="Pixi"
+        />
+        <img
+          class="description-flower"
+          src="./public/Shape/flower.svg"
+          alt=""
+        />
+      </div>
+    </section>
+    <img class="header-line" src="./public/Shape/line.svg" alt="" />
+    <section class="seven-hour">
+      <h2 class="seven-hour-title">07H00 : RÉVEIL NUMÉRIQUE</h2>
+      <div class="seven-hour-content">
+      <div class="seven-hour-lea">
+        <img class="seven-hour-lea-image" src="./public/Léa/leadort.svg" alt="" />
+        <p class="seven-hour-lea-texte">Un smartphone consulté <span>61 %</span> du temps dès le réveil.</p>
+      </div>
+      <div class="seven-hour-pixi">
+        <img class="seven-hour-pixi-image" src="./public/Pixi/PixiDrapeau.svg" alt="" />
+        <p class="seven-hour-pixi-texte">un smartphone = <span>200kg </span>de matière</p>
+      </div>
+    </div>
+    <img class="seven-hour-shape" src="./public/Shape/shape2.svg" alt="">
+    </section>
+    <section class="mail">
+      <h2 class="mail-titre">08H00 : LES MAILS DU MATIN</h2>
+      <div class="mail-content">
+        <div class="mail-texte">
+        <p class="mail-description">Un mail = <span>4g</span> de CO2</p>
+        <p class="mail-description">Piece jointe = <span>X10</span></p>
+      </div>
+      <img class="mail-image-tel" src="./public/tel2.svg" alt="">
+      <img class="mail-image-pixi" src="./public/Pixi/pixi poids.svg" alt="">
+    </div>
+    <img class="mail-image-mail" src="./public/mail.svg" alt="">
+    <img class="mail-image-shape3" src="./public/Shape/shape3.svg" alt="">
+    </section>
+    <section class="trajet">
+      <h2 class="trajet-titre">
+        09H00 : LE TRAJET
+      </h2>
+      <div class="trajet-content">
+        <p class="trajet-texte">Le streaming vidéo = <span>66 %</span> du trafic internet mondial.</p>
+        <div class="trajet-image-texte">
+        <img class="trajet-image" src="./public/Planete.svg" alt="">
+        <p class="trajet-description">Une donnée parcourt en moyenne <span>15 000 km</span></p>
+      </div>
+      </div>
+    </section>
+<section class="travail">
+    <h2 class="travail-title">10H00 : LE TRAVAIL</h2>
+    
+    <div class="cards-container">
+      <div class="card card-blue">
+        <h3>1 ordinateur portable (2 kg)</h3>
+        <p>= <br>588 kg de matières extraites pour sa fabrication.</p>
+        <svg width="234" height="226" viewBox="0 0 234 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.9736 147.692C24.2036 138.955 13.1278 135.544 7.50238 125.867C-3.71346 106.584 -2.5608 80.4432 12.3587 63.3874C25.5661 48.2808 46.2861 46.9928 65.6081 47.9674C69.0672 18.0675 89.9265 0.245949 117.949 0.00229473C144.084 -0.24136 165.397 18.9378 169.241 48.3155C197.962 42.9203 224.621 56.9131 232.168 83.8195C239.191 108.846 225.46 138.189 200.548 146.926C216.026 171.152 208.793 199.207 188.214 215.741C168.402 231.648 138.913 228.968 117.285 208.257C98.2421 226.81 69.8009 232.031 48.9066 218.073C26.1954 202.932 17.6348 174.146 32.9736 147.727V147.692Z"/>
+        </svg>
+      </div>
+
+      <div class="card card-yellow">
+        <h3>75 % de sa consommation</h3>
+        <p>fonctionne en inactivité ou veille.</p>
+        <svg width="234" height="226" viewBox="0 0 234 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.9736 147.692C24.2036 138.955 13.1278 135.544 7.50238 125.867C-3.71346 106.584 -2.5608 80.4432 12.3587 63.3874C25.5661 48.2808 46.2861 46.9928 65.6081 47.9674C69.0672 18.0675 89.9265 0.245949 117.949 0.00229473C144.084 -0.24136 165.397 18.9378 169.241 48.3155C197.962 42.9203 224.621 56.9131 232.168 83.8195C239.191 108.846 225.46 138.189 200.548 146.926C216.026 171.152 208.793 199.207 188.214 215.741C168.402 231.648 138.913 228.968 117.285 208.257C98.2421 226.81 69.8009 232.031 48.9066 218.073C26.1954 202.932 17.6348 174.146 32.9736 147.727V147.692Z"/>
+        </svg>
+      </div>
+
+      <div class="card card-pink">
+        <h3>Une recherche Google</h3>
+        <p>=<br>data qui traverse plusieurs centres de données.</p>
+        <svg width="234" height="226" viewBox="0 0 234 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.9736 147.692C24.2036 138.955 13.1278 135.544 7.50238 125.867C-3.71346 106.584 -2.5608 80.4432 12.3587 63.3874C25.5661 48.2808 46.2861 46.9928 65.6081 47.9674C69.0672 18.0675 89.9265 0.245949 117.949 0.00229473C144.084 -0.24136 165.397 18.9378 169.241 48.3155C197.962 42.9203 224.621 56.9131 232.168 83.8195C239.191 108.846 225.46 138.189 200.548 146.926C216.026 171.152 208.793 199.207 188.214 215.741C168.402 231.648 138.913 228.968 117.285 208.257C98.2421 226.81 69.8009 232.031 48.9066 218.073C26.1954 202.932 17.6348 174.146 32.9736 147.727V147.692Z"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+<section class="dejeuner">
+    <h2 class="dejeuner-title">13H00 : PAUSE DÉJEUNER EN STREAMING</h2>
+    
+    <div class="dejeuner-wrapper">
+      <div class="info-bubble bubble-left">
+        <svg width="280" height="280" viewBox="0 0 1398 832" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M695.003 95.528C791.125 24.6822 947.755 -9.4288 962.938 130.514C1104.94 6.40219 1237.35 26.7813 1197.38 209.231C1393.2 130.076 1386.61 271.331 1264.26 349.086C1492.11 375.763 1396.1 486.317 1219.6 489.204C1442.77 625.123 1177.51 652.062 1029.81 602.907C1125.49 779.672 865.926 771.625 756.296 672.966C738.434 672.703 725.482 818.943 589.617 803.636C528.103 796.727 518.839 750.109 488.362 716.785C460.452 714.949 339.993 868.535 217.413 823.841C126.204 790.605 200.664 655.473 225.895 602.995C-25.8517 689.234 -75.7547 515.005 119.614 410.311C148.975 394.567 217.186 384.86 180.569 362.906C152.882 346.288 95.1692 342.351 70.8318 308.939C7.86724 222.525 150.318 113.633 259.278 174.333C239.852 30.0176 330.838 -15.2013 437.901 113.108C480.993 9.0262 694.113 -70.3037 694.894 95.6156L695.003 95.528Z" fill="#E95C3B"/>
+        </svg>
+        <div class="info-bubble-content">
+          <h3>En France, le streaming</h3>
+          <p><span class="highlight">5,6</span> millions de tonnes <span class="highlight">CO₂/AN</span></p>
+        </div>
+      </div>
+
+      <div class="center-content">
+        <div class="computer-wrapper">
+          <img class="computer" src="./public/computer.svg" alt="computer">
+          <div class="screen-content">
+            <img class="road" src="./public/route.svg" alt="road">
+            <img class="voiture" src="./public/voiture.svg" alt="cars">
+          </div>
+        </div>
+        <p class="equivalent-text">Équivalent à <strong>4 MILLIONS</strong> de voitures</p>
+      </div>
+
+      <div class="info-bubble bubble-right">
+        <svg width="280" height="280" viewBox="0 0 1398 832" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M695.003 95.528C791.125 24.6822 947.755 -9.4288 962.938 130.514C1104.94 6.40219 1237.35 26.7813 1197.38 209.231C1393.2 130.076 1386.61 271.331 1264.26 349.086C1492.11 375.763 1396.1 486.317 1219.6 489.204C1442.77 625.123 1177.51 652.062 1029.81 602.907C1125.49 779.672 865.926 771.625 756.296 672.966C738.434 672.703 725.482 818.943 589.617 803.636C528.103 796.727 518.839 750.109 488.362 716.785C460.452 714.949 339.993 868.535 217.413 823.841C126.204 790.605 200.664 655.473 225.895 602.995C-25.8517 689.234 -75.7547 515.005 119.614 410.311C148.975 394.567 217.186 384.86 180.569 362.906C152.882 346.288 95.1692 342.351 70.8318 308.939C7.86724 222.525 150.318 113.633 259.278 174.333C239.852 30.0176 330.838 -15.2013 437.901 113.108C480.993 9.0262 694.113 -70.3037 694.894 95.6156L695.003 95.528Z" fill="#74B7E4"/>
+        </svg>
+        <div class="info-bubble-content">
+          <h3><span class="highlight">4K</span><br>=<br><span class="highlight">3X</span></h3>
+          <p>plus d'énergie que HD</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="cloud">
+      <div class="cloud-left">
+        <h2 class="cloud-title">15H00 : CLOUD, PHOTOS, RESEAUX</h2>
+        <p class="cloud-description">Les datacenters = consommation électrique équivalente à une ville de <span>50 000 habitants<br>pour 10 000 m²</span></p>
+        <div class="cloud-shapes-decoration">
+          <img class="shape-top" src="./public/Shape/shape1.svg" alt="">
+          <img class="shape-bottom" src="./public/Shape/shape1.svg" alt="">
+        </div>
+        <img class="cloud-background" src="./public/Shape/shape4.svg" alt="">
+      </div>
+      <div class="cloud-right">
+        <div class="cloud-content">
+          <img class="nuage" src="./public/nuage.svg" alt="">
+          <img class="datacenter" src="./public/datacenter.svg" alt="">
+        </div>
+      </div>
+    </section>
+    <section class="consumption-end">
+      <h2 class="consumption-end-title">17H00 : FIN DE JOURNÉE MAIS PAS FIN DE CONSOMMATION</h2>
+      
+      <div class="consumption-end-content">
+        <div class="consumption-end-left">
+          <img class="phone-illustration" src="./public/tel.svg" alt="phone">
+          <img class="light-illustration" src="./public/light.svg" alt="light">
+        </div>
+        
+        <div class="consumption-end-center">
+          <p class="consumption-text"><span>3/4 </span>de la consommation informatique à lieux en <span class="highlight-text">INACTIVITE</span></p>
+          <p class="consumption-description">Les connexions de fond, mises à jour, synchronisations continuent.</p>
+        </div>
+        
+        <div class="consumption-end-right">
+          <div class="pixi-container">
+            <img class="pixi-character" src="./public/Pixi/pixi lunette.svg" alt="pixi">
+            <img class="pixi-bubble" src="./public/bulle de nuage 1.svg" alt="bubble">
+            <p class="bubble-text">Même en veille… ça consomme</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="gaming">
+      <div class="gaming-top">
+        <h2 class="gaming-title">19H00 : GAMING / STREAMING / RESEAUX SOCIAUX</h2>
+      </div>
+      
+      <div class="gaming-bottom">
+        <div class="gaming-left">
+          <img class="gaming-phone" src="./public/tel.svg" alt="phone">
+        </div>
+        
+        <div class="gaming-center">
+          <p class="gaming-text">Les data centers <br>= <br><span>1.5 %</span> de la consommation électrique mondiale</p>
+          <img class="pixi-gaming" src="./public/Pixi/Pixi.svg" alt="pixi">
+        </div>
+        
+        <div class="gaming-right">
+          <img class="gaming-laptop" src="./public/ordinateur.svg" alt="laptop">
+        </div>
+        
+        <img class="gaming-controller" src="./public/manette.svg" alt="controller">
+      </div>
+      <img class="gaming-shape" src="./public/Shape/shape5.svg" alt="">
+    </section>
+    <section class="sleep">
+      <h2 class="sleep-title">00H00 : LE NUMÉRIQUE NE DORT PAS</h2>
+      <p class="sleep-text"><span>LES SERVEURS TOURNENT 24/7</span></p>
+      <div class="sleep-content">
+      <div class="sleep-left">
+        <img class="sleep-lea" src="./public/léa qui dort 2.svg" alt="léa qui dort">
+      </div>
+      <div class="sleep-center">
+        <div class="sleep-cloud-container">
+          <img class="sleep-city" src="./public/nuage ville.svg" alt="nuage ville">
+          <p class="sleep-text">Un utilisateur génère <span>0,5 a 2 Go de donnees</span> par nuit via les synchronisation et mises a jour invisibles.</p>
+        </div>
+      </div>
+      <div class="sleep-right">
+        <p class="sleep-text">Un smartphone en veille = <span>1 à 2 Watt</span> par heure.</p>
+        <p class="sleep-text">Un data center ne peut <span>jamais s'arreter</span> , même 5 minutes.</p>
+      </div>
+    </div>
+    </section>
+    <section class="footer">
+      <p>Site imaginé, illustré et conçu par</p>
+    <h2 class="footer-title">PINARDEL NINA <br>& <br>TRELAT OWEN</h2>
+    
+    <div class="footer-container">
+      <div class="cards cards-blue">
+        <h3>SOURCES & INSPIRATIONS</h3>
+        <p>ADEME<br>QQF</p>
+        <svg width="234" height="226" viewBox="0 0 234 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.9736 147.692C24.2036 138.955 13.1278 135.544 7.50238 125.867C-3.71346 106.584 -2.5608 80.4432 12.3587 63.3874C25.5661 48.2808 46.2861 46.9928 65.6081 47.9674C69.0672 18.0675 89.9265 0.245949 117.949 0.00229473C144.084 -0.24136 165.397 18.9378 169.241 48.3155C197.962 42.9203 224.621 56.9131 232.168 83.8195C239.191 108.846 225.46 138.189 200.548 146.926C216.026 171.152 208.793 199.207 188.214 215.741C168.402 231.648 138.913 228.968 117.285 208.257C98.2421 226.81 69.8009 232.031 48.9066 218.073C26.1954 202.932 17.6348 174.146 32.9736 147.727V147.692Z"/>
+        </svg>
+      </div>
+
+      <div class="cards cards-yellow">
+        <h3>THEMATIQUE</h3>
+        <p>“Ta vie numérique en 24h” <br>Un projet visant à rendre visible l’impact caché de nos usages numériques.</p>
+        <svg width="234" height="226" viewBox="0 0 234 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.9736 147.692C24.2036 138.955 13.1278 135.544 7.50238 125.867C-3.71346 106.584 -2.5608 80.4432 12.3587 63.3874C25.5661 48.2808 46.2861 46.9928 65.6081 47.9674C69.0672 18.0675 89.9265 0.245949 117.949 0.00229473C144.084 -0.24136 165.397 18.9378 169.241 48.3155C197.962 42.9203 224.621 56.9131 232.168 83.8195C239.191 108.846 225.46 138.189 200.548 146.926C216.026 171.152 208.793 199.207 188.214 215.741C168.402 231.648 138.913 228.968 117.285 208.257C98.2421 226.81 69.8009 232.031 48.9066 218.073C26.1954 202.932 17.6348 174.146 32.9736 147.727V147.692Z"/>
+        </svg>
+      </div>
+
+      <div class="cards cards-pink">
+        <h3>ILLUSTRATION & IDENTITÉ VISUEL</h3>
+        <p>Création des personnages : <br> Léa & Pixi. <br> Direction artistique : style flat design & univers numérique responsable.</p>
+        <svg width="234" height="226" viewBox="0 0 234 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.9736 147.692C24.2036 138.955 13.1278 135.544 7.50238 125.867C-3.71346 106.584 -2.5608 80.4432 12.3587 63.3874C25.5661 48.2808 46.2861 46.9928 65.6081 47.9674C69.0672 18.0675 89.9265 0.245949 117.949 0.00229473C144.084 -0.24136 165.397 18.9378 169.241 48.3155C197.962 42.9203 224.621 56.9131 232.168 83.8195C239.191 108.846 225.46 138.189 200.548 146.926C216.026 171.152 208.793 199.207 188.214 215.741C168.402 231.648 138.913 228.968 117.285 208.257C98.2421 226.81 69.8009 232.031 48.9066 218.073C26.1954 202.932 17.6348 174.146 32.9736 147.727V147.692Z"/>
+        </svg>
+      </div>
+    </div>
+    <div class="outils">
+      <h3 class="outils-title">OUTILS NECESSAIRES</h3>
+      <div class="outils-container">
+        <div class="outils-content">
+          <img class="outils-logo" src="./public/illustrator.svg" alt="">
+          <p class="outils-name">ILLUSTRATOR</p>
+        </div>
+        <div class="outils-content">
+          <img class="outils-logo" src="./public/figma.svg" alt="">
+          <p class="outils-name">FIGMA</p>
+        </div>
+        <div class="outils-content">
+          <img class="outils-logo" src="./public/gsap.svg" alt="">
+          <p class="outils-name">GSAP</p>
+        </div>
+        <div class="outils-content">
+          <img class="outils-logo" src="./public/lottie.svg" alt="">
+          <p class="outils-name">LOTTIEFILE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section></section>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
