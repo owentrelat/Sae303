@@ -1,8 +1,10 @@
 import "./style.css"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { Lenis } from "lenis"
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 
 gsap.from(".header-h1", {
@@ -547,6 +549,64 @@ gsap.to(".description-flower", {
     end: "bottom 20%",
     scrub: 0.5
   },
-  y: -100,
+  y: 50,
   duration: 1
 })
+
+const navDots = document.querySelectorAll(".nav-dot")
+const sections = document.querySelectorAll(".description, .seven-hour, .mail, .trajet, .travail, .dejeuner, .cloud, .consumption-end, .gaming, .sleep")
+
+sections.forEach((section, index) => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top 50%",
+    end: "bottom 50%",
+    onEnter: () => {
+      updateActiveDot(index)
+    },
+    onEnterBack: () => {
+      updateActiveDot(index)
+    }
+  })
+})
+
+function updateActiveDot(index) {
+  navDots.forEach(dot => dot.classList.remove("active"))
+  navDots[index].classList.add("active")
+}
+
+navDots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    gsap.to(window, {
+      duration: 0.8,
+      scrollTo: sections[index],
+      ease: "power2.inOut"
+    })
+  })
+})
+
+gsap.registerPlugin(ScrollToPlugin)
+document.addEventListener("DOMContentLoaded", () => {
+  const lenis = new Lenis();
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+  gsap.ticker.lagSmoothing(0);
+  const path = document.getElementById("svg-paths");
+  const pathlength = path.getTotalLength();
+
+  path.style.strokeDasharray = pathlength;
+  path.style.strokeDashoffset = pathlength;
+
+  gsap.to(path, {
+    strokeDashoffset: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: path,
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true
+    }
+  });
+});

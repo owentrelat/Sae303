@@ -43,6 +43,40 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.nav-dots {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-background);
+  box-shadow: 0 0 20px rgba(255, 157, 222, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nav-dot:hover {
+  background-color: var(--color-background);
+  transform: scale(1.2);
+}
+
+.nav-dot.active {
+  background-color: var(--color-orange);
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 0 20px rgba(255, 157, 222, 0.6);
+}
+
 .nav-title {
   color: var(--color-white);
   font-size: 1.5rem;
@@ -195,7 +229,6 @@ body {
 
 .description-flower {
   position: absolute;
-  border-radius: 50%;
   top: -2rem;
   right: 0rem;
   z-index: -1;
@@ -204,9 +237,9 @@ body {
 .header-line {
   position: absolute;
   top: 0rem;
-  right: 0rem;
-  width: 100%;
-  z-index: -9999;
+  right: -5rem;
+  width: 1747px;
+  z-index: -10;
 }
 
 .seven-hour {
