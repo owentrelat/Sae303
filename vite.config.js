@@ -4,11 +4,11 @@ import { resolve } from "path";
 
 export default defineConfig({
   plugins: [gsap()],
-  base: "/SAE303/",
+  base: "/Sae303/",
   build: {
     rollupOptions: {
       input: {
-        main: resolve(dirname, "index.html"),
+        main: resolve(__dirname, "index.html"),
         },
     },
   },
