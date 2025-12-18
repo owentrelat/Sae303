@@ -1,10 +1,9 @@
-import "./style.css"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { Lenis } from "lenis"
+import "./style.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
 gsap.from(".header-h1", {
@@ -224,6 +223,16 @@ gsap.to(".trajet-image", {
   ease: "none"
 })
 
+gsap.from(".trajet-image", {
+  scrollTrigger: {
+    trigger: ".trajet",
+    start: "top 70%"
+  },
+  duration: 0.8,
+  scale: 0,
+  ease: "power2.out"
+})
+
 gsap.from(".trajet-description", {
   duration: 19,
   rotation: -360,
@@ -355,11 +364,23 @@ gsap.to(".nuage", {
 
 gsap.to(".datacenter", {
   duration: 4,
-  y: -20,
+  x: -20,
   repeat: -1,
   yoyo: true,
   ease: "sine.inOut",
   delay: 0.3
+})
+
+gsap.from(".datacenter", {
+  scrollTrigger: {
+    trigger: ".cloud",
+    start: "top 70%"
+  },
+  duration: 0.8,
+  y: 100,
+  opacity: 0,
+  ease: "power2.out",
+  delay: 0.2
 })
 
 gsap.from(".consumption-end-title", {
@@ -393,8 +414,8 @@ gsap.to(".phone-illustration", {
 })
 
 gsap.to(".light-illustration", {
-  duration: 5,
-  opacity: 0.4,
+  duration: 1,
+  opacity: 0.1,
   repeat: -1,
   ease: "none"
 })
@@ -549,8 +570,21 @@ gsap.to(".description-flower", {
     end: "bottom 20%",
     scrub: 0.5
   },
-  y: 50,
+  y: -100,
   duration: 1
+})
+
+// Animation de la ligne SVG au scroll
+gsap.to(".header-line path", {
+  scrollTrigger: {
+    trigger: ".description",
+    start: "top 80%",
+    end: "top 0%",
+    scrub: 0.5
+  },
+  strokeDashoffset: 0,
+  duration: 1,
+  ease: "power2.inOut"
 })
 
 const navDots = document.querySelectorAll(".nav-dot")
@@ -585,28 +619,27 @@ navDots.forEach((dot, index) => {
   })
 })
 
-gsap.registerPlugin(ScrollToPlugin)
-document.addEventListener("DOMContentLoaded", () => {
-  const lenis = new Lenis();
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-  gsap.ticker.lagSmoothing(0);
-  const path = document.getElementById("svg-paths");
-  const pathlength = path.getTotalLength();
+const shapeElement = document.querySelector(".seven-hour-shape")
 
-  path.style.strokeDasharray = pathlength;
-  path.style.strokeDashoffset = pathlength;
-
-  gsap.to(path, {
-    strokeDashoffset: 0,
-    ease: "none",
-    scrollTrigger: {
-      trigger: path,
-      start: "top top",
-      end: "bottom bottom",
-      scrub: true
-    }
-  });
-});
+document.addEventListener("mousemove", (event) => {
+  if (shapeElement) {
+    const mouseX = event.clientX
+    const mouseY = event.clientY
+    
+    const centerX = window.innerWidth / 2
+    const centerY = window.innerHeight / 2
+    
+    const deltaX = mouseX - centerX
+    const deltaY = mouseY - centerY
+    
+    const moveX = deltaX * 0.1
+    const moveY = deltaY * 0.1
+    
+    gsap.to(shapeElement, {
+      duration: 0.5,
+      x: moveX,
+      y: moveY,
+      ease: "power2.out"
+    })
+  }
+})
