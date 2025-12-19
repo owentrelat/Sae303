@@ -5,6 +5,12 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+// Détecteur de responsive
+const isMobile = () => window.innerWidth <= 768;
+
+// Charger les animations seulement sur desktop
+if (!isMobile()) {
+
 
 gsap.from(".header-h1", {
   duration: 1.2,
@@ -642,4 +648,4 @@ document.addEventListener("mousemove", (event) => {
       ease: "power2.out"
     })
   }
-})
+})}
